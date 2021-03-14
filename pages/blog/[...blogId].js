@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import styles from '../../styles/Home.module.css'
 
-export default function Home() {
+export default function Blog() {
 
     console.log('blog router:  ', useRouter());
   return (
