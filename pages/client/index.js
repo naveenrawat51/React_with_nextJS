@@ -22,10 +22,17 @@ export default function Client() {
                     clients.map((client) => {
                         return (
                             <li key={client.projectId}>
-                                <Link href={`/client/${client.projectName}/${client.projectId}`}>
-                                {client.projectName}
+                                <Link href={{
+                                    pathname: "/client/[id]",
+                                    query: {
+                                        id: client.projectId
+                                    }
+                                }}
+                                // {`/client/${client.projectName}/${client.projectId}`}
+                                >
+                                    {client.projectName}
                                 </Link>
-                                </li>
+                            </li>
                         )
                     })
                 }
